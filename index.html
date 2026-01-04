@@ -51,9 +51,7 @@
         }
 
         .hero-bg {
-            /* ВАЖНО: Убедитесь, что у вас есть файл bg-main.jpg в папке img 
-               или замените это имя на название вашего фонового изображения.
-            */
+            /* Убедитесь, что у вас есть файл bg-main.jpg в папке img */
             background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url('img/bg-main.jpg'); 
             background-size: cover;
             background-position: center;
@@ -176,11 +174,6 @@
                 <div class="relative group">
                     <div class="absolute -top-6 -left-6 w-full h-full border border-[#bf953f]/20 z-0 transition-all duration-700 group-hover:-top-3 group-hover:-left-3"></div>
                     
-                    <!-- 
-                        ВОТ ЗДЕСЬ ИЗМЕНЕНИЕ:
-                        Путь к вашему фото: img/Profile.png
-                        Я убрал все "запасные" картинки. Если в VS Code файл есть, он покажется.
-                    -->
                     <img src="img/Profile.png" alt="Kate Pedak PMU" class="relative z-10 w-full h-[650px] object-cover grayscale group-hover:grayscale-0 transition duration-1000 ease-in-out shadow-2xl">
                     
                 </div>
@@ -200,7 +193,7 @@
         </div>
     </section>
 
-    <!-- Services Section (Dynamic Content) -->
+    <!-- Services Section -->
     <section id="services" class="py-28 bg-[#fafafa]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-24">
@@ -208,15 +201,13 @@
                 <h2 class="font-logo text-5xl mt-4 text-dark">Signature Services</h2>
             </div>
             
-            <!-- JavaScript will inject cards here -->
             <div id="services-container" class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
-                <!-- Loading fallback -->
                 <p class="text-center col-span-3 text-grey">Loading services...</p>
             </div>
         </div>
     </section>
 
-    <!-- PROCESS & PRE-CARE SECTION -->
+    <!-- Process Section -->
     <section id="process" class="py-28 bg-dark text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
@@ -238,13 +229,12 @@
                     </div>
                 </div>
 
-                <!-- Right: Pre-Care (Dynamic Content) -->
+                <!-- Right: Pre-Care -->
                 <div class="bg-[#1a1a1a] p-10 border border-gray-800 relative">
                     <div class="absolute -top-3 -right-3 text-4xl text-[#bf953f] opacity-20"><i class="fa-solid fa-clipboard-check"></i></div>
                     <h3 class="font-logo text-2xl mb-2">How to Prepare</h3>
                     <p class="text-[#bf953f] text-xs uppercase tracking-widest mb-8">Strict Pre-Care Instructions</p>
                     
-                    <!-- JavaScript will inject list items here -->
                     <ul id="precare-list" class="space-y-6">
                         <!-- Loading fallback -->
                     </ul>
@@ -274,11 +264,18 @@
                         </a>
                     </div>
                 </div>
+                
                 <!-- Right: Form -->
                 <div class="bg-white p-12 shadow-2xl border border-gray-50 relative">
                     <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#bf953f] to-[#fcf6ba]"></div>
                     <h3 class="font-logo text-3xl mb-10 text-dark">Request Booking</h3>
-                    <form name="booking" method="POST" data-netlify="true" action="/success.html">
+                    
+                    <!-- 
+                       ВАЖНО: Форма должна быть простой, а JavaScript (внизу) перехватит отправку.
+                       Убрали action из HTML, чтобы не было конфликтов, 
+                       JS сам отправит данные и перекинет на success.html
+                    -->
+                    <form id="booking-form" name="booking" method="POST" data-netlify="true">
                         <input type="hidden" name="form-name" value="booking">
                         <div class="mb-8"><input type="text" name="name" required class="form-input" placeholder="Full Name"></div>
                         <div class="mb-8"><input type="tel" name="phone" required class="form-input" placeholder="Phone Number"></div>
@@ -317,9 +314,9 @@
         </div>
     </footer>
 
-    <!-- MAIN SCRIPT (Logic that uses data) -->
+    <!-- MAIN SCRIPT -->
     <script>
-        // --- 1. JSON DATA (Это содержимое должно лежать в data/services.json) ---
+        // --- 1. JSON DATA ---
         const siteData = {
             services: [
                 {
@@ -338,7 +335,7 @@
                     description: "Restores lost pigment, corrects asymmetry, and adds a healthy flush of color. Heals to a translucent, watercolor effect.",
                     time: "3 Hours",
                     price: "$500+",
-                    popular: true // This will trigger the "Most Popular" badge
+                    popular: true
                 },
                 {
                     id: "eyes",
@@ -374,12 +371,11 @@
             ]
         };
 
-        // --- 2. RENDER FUNCTIONS (Это должно лежать в js/app.js) ---
-
+        // --- 2. RENDER FUNCTIONS ---
         function renderServices() {
             const container = document.getElementById('services-container');
             if (!container) return;
-            container.innerHTML = ''; // Clear loading
+            container.innerHTML = ''; 
 
             siteData.services.forEach(service => {
                 const isPopular = service.popular 
@@ -422,12 +418,40 @@
             });
         }
 
-        // --- 3. INIT ---
+        // --- 3. СКРИПТ ОТПРАВКИ ФОРМЫ (РЕШАЕТ ПРОБЛЕМУ С 404) ---
+        function handleFormSubmit() {
+            const form = document.getElementById('booking-form');
+            if(!form) return;
+
+            form.addEventListener('submit', (e) => {
+                e.preventDefault(); // Останавливаем обычную отправку (чтобы не было 404)
+                
+                const formData = new FormData(form);
+                
+                // Отправляем данные "тихо" через JS
+                fetch('/', {
+                    method: 'POST',
+                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                    body: new URLSearchParams(formData).toString()
+                })
+                .then(() => {
+                    // УСПЕХ: Перекидываем пользователя на страницу успеха
+                    window.location.href = "/success.html";
+                })
+                .catch((error) => {
+                    alert('Error submitting form. Please call us directly.');
+                    console.error(error);
+                });
+            });
+        }
+
+        // --- 4. INIT ---
         document.addEventListener('DOMContentLoaded', () => {
             renderServices();
             renderPreCare();
+            handleFormSubmit(); // Включаем обработчик формы
             
-            // Mobile Menu Logic
+            // Mobile Menu
             const btn = document.getElementById('mobile-menu-btn');
             const menu = document.getElementById('mobile-menu');
             if(btn && menu) {
