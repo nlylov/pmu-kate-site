@@ -9,7 +9,6 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Added Cinzel for the logo font -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     
     <!-- Icons -->
@@ -52,7 +51,10 @@
         }
 
         .hero-bg {
-            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1588510883389-98c4b7b34e2c?q=80&w=2070&auto=format&fit=crop'); 
+            /* ВАЖНО: Убедитесь, что у вас есть файл bg-main.jpg в папке img 
+               или замените это имя на название вашего фонового изображения.
+            */
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url('img/bg-main.jpg'); 
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -173,7 +175,14 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
                 <div class="relative group">
                     <div class="absolute -top-6 -left-6 w-full h-full border border-[#bf953f]/20 z-0 transition-all duration-700 group-hover:-top-3 group-hover:-left-3"></div>
-                    <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=2069&auto=format&fit=crop" alt="Kate Pedak PMU" class="relative z-10 w-full h-[650px] object-cover grayscale group-hover:grayscale-0 transition duration-1000 ease-in-out shadow-2xl">
+                    
+                    <!-- 
+                        ВОТ ЗДЕСЬ ИЗМЕНЕНИЕ:
+                        Путь к вашему фото: img/Profile.png
+                        Я убрал все "запасные" картинки. Если в VS Code файл есть, он покажется.
+                    -->
+                    <img src="img/Profile.png" alt="Kate Pedak PMU" class="relative z-10 w-full h-[650px] object-cover grayscale group-hover:grayscale-0 transition duration-1000 ease-in-out shadow-2xl">
+                    
                 </div>
                 <div class="pl-0 lg:pl-10">
                     <span class="gold-text-style font-serif text-2xl italic mb-4 block">The Artist</span>
@@ -191,41 +200,23 @@
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Services Section (Dynamic Content) -->
     <section id="services" class="py-28 bg-[#fafafa]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-24">
                 <span class="text-[#bf953f] uppercase tracking-[0.4em] text-[10px] font-bold">Menu</span>
                 <h2 class="font-logo text-5xl mt-4 text-dark">Signature Services</h2>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
-                <!-- Brows -->
-                <div class="bg-white p-12 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(191,149,63,0.15)] transition duration-500 hover:-translate-y-2 group">
-                    <div class="text-[#bf953f] text-4xl mb-8 opacity-80 group-hover:opacity-100 transition"><i class="fa-solid fa-eye"></i></div>
-                    <h3 class="font-logo text-2xl mb-6 text-dark tracking-wide">Powder Brows</h3>
-                    <p class="text-grey font-light text-sm mb-10 leading-relaxed min-h-[80px]">A soft, pixelated shading technique that heals to a natural powder finish. Ideal for all skin types, creating a defined yet airy look.</p>
-                    <div class="flex justify-between items-center border-t border-gray-100 pt-8"><span class="text-[10px] uppercase tracking-widest font-bold text-gray-400">2.5 Hours</span><span class="gold-text-style font-serif text-2xl italic">$450+</span></div>
-                </div>
-                <!-- Lips -->
-                <div class="bg-white p-12 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(191,149,63,0.15)] transition duration-500 hover:-translate-y-2 group relative border-t-2 border-[#bf953f]">
-                    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#bf953f] text-white px-3 py-1 text-[9px] uppercase tracking-widest">Most Popular</div>
-                    <div class="text-[#bf953f] text-4xl mb-8 opacity-80 group-hover:opacity-100 transition"><i class="fa-solid fa-heart"></i></div>
-                    <h3 class="font-logo text-2xl mb-6 text-dark tracking-wide">Lip Blush</h3>
-                    <p class="text-grey font-light text-sm mb-10 leading-relaxed min-h-[80px]">Restores lost pigment, corrects asymmetry, and adds a healthy flush of color. Heals to a translucent, watercolor effect.</p>
-                    <div class="flex justify-between items-center border-t border-gray-100 pt-8"><span class="text-[10px] uppercase tracking-widest font-bold text-gray-400">3 Hours</span><span class="gold-text-style font-serif text-2xl italic">$500+</span></div>
-                </div>
-                <!-- Eyes -->
-                <div class="bg-white p-12 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(191,149,63,0.15)] transition duration-500 hover:-translate-y-2 group">
-                    <div class="text-[#bf953f] text-4xl mb-8 opacity-80 group-hover:opacity-100 transition"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-                    <h3 class="font-logo text-2xl mb-6 text-dark tracking-wide">Lash Line</h3>
-                    <p class="text-grey font-light text-sm mb-10 leading-relaxed min-h-[80px]">Pigment is placed between the lashes to create the illusion of thicker, darker lashes without looking like makeup.</p>
-                    <div class="flex justify-between items-center border-t border-gray-100 pt-8"><span class="text-[10px] uppercase tracking-widest font-bold text-gray-400">1.5 Hours</span><span class="gold-text-style font-serif text-2xl italic">$350+</span></div>
-                </div>
+            
+            <!-- JavaScript will inject cards here -->
+            <div id="services-container" class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+                <!-- Loading fallback -->
+                <p class="text-center col-span-3 text-grey">Loading services...</p>
             </div>
         </div>
     </section>
 
-    <!-- PROCESS & PRE-CARE SECTION (NEW!) -->
+    <!-- PROCESS & PRE-CARE SECTION -->
     <section id="process" class="py-28 bg-dark text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
@@ -247,41 +238,15 @@
                     </div>
                 </div>
 
-                <!-- Right: Pre-Care (NEW!) -->
+                <!-- Right: Pre-Care (Dynamic Content) -->
                 <div class="bg-[#1a1a1a] p-10 border border-gray-800 relative">
                     <div class="absolute -top-3 -right-3 text-4xl text-[#bf953f] opacity-20"><i class="fa-solid fa-clipboard-check"></i></div>
                     <h3 class="font-logo text-2xl mb-2">How to Prepare</h3>
                     <p class="text-[#bf953f] text-xs uppercase tracking-widest mb-8">Strict Pre-Care Instructions</p>
                     
-                    <ul class="space-y-6">
-                        <li class="flex items-start">
-                            <i class="fa-solid fa-ban text-[#bf953f] mt-1 mr-4"></i>
-                            <div>
-                                <span class="block text-sm font-bold uppercase tracking-wide">24h Before: No Coffee</span>
-                                <span class="text-xs text-gray-500">Caffeine causes bleeding and poor color retention. This is critical!</span>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fa-solid fa-wine-glass-empty text-[#bf953f] mt-1 mr-4"></i>
-                            <div>
-                                <span class="block text-sm font-bold uppercase tracking-wide">24h Before: No Alcohol</span>
-                                <span class="text-xs text-gray-500">Alcohol thins the blood. Please avoid it completely.</span>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fa-solid fa-syringe text-[#bf953f] mt-1 mr-4"></i>
-                            <div>
-                                <span class="block text-sm font-bold uppercase tracking-wide">4 Weeks: No Botox</span>
-                                <span class="text-xs text-gray-500">Botox must be done at least 4 weeks prior to your appointment.</span>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fa-solid fa-sun text-[#bf953f] mt-1 mr-4"></i>
-                            <div>
-                                <span class="block text-sm font-bold uppercase tracking-wide">1 Week: No Sun</span>
-                                <span class="text-xs text-gray-500">We cannot work on sunburned or freshly tanned skin.</span>
-                            </div>
-                        </li>
+                    <!-- JavaScript will inject list items here -->
+                    <ul id="precare-list" class="space-y-6">
+                        <!-- Loading fallback -->
                     </ul>
                 </div>
             </div>
@@ -352,11 +317,126 @@
         </div>
     </footer>
 
+    <!-- MAIN SCRIPT (Logic that uses data) -->
     <script>
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-        btn.addEventListener('click', () => { menu.classList.toggle('hidden'); });
-        document.querySelectorAll('#mobile-menu a').forEach(link => { link.addEventListener('click', () => { menu.classList.add('hidden'); }); });
+        // --- 1. JSON DATA (Это содержимое должно лежать в data/services.json) ---
+        const siteData = {
+            services: [
+                {
+                    id: "brows",
+                    icon: "fa-eye",
+                    title: "Powder Brows",
+                    description: "A soft, pixelated shading technique that heals to a natural powder finish. Ideal for all skin types, creating a defined yet airy look.",
+                    time: "2.5 Hours",
+                    price: "$450+",
+                    popular: false
+                },
+                {
+                    id: "lips",
+                    icon: "fa-heart",
+                    title: "Lip Blush",
+                    description: "Restores lost pigment, corrects asymmetry, and adds a healthy flush of color. Heals to a translucent, watercolor effect.",
+                    time: "3 Hours",
+                    price: "$500+",
+                    popular: true // This will trigger the "Most Popular" badge
+                },
+                {
+                    id: "eyes",
+                    icon: "fa-wand-magic-sparkles",
+                    title: "Lash Line",
+                    description: "Pigment is placed between the lashes to create the illusion of thicker, darker lashes without looking like makeup.",
+                    time: "1.5 Hours",
+                    price: "$350+",
+                    popular: false
+                }
+            ],
+            preCare: [
+                {
+                    icon: "fa-ban",
+                    title: "24h Before: No Coffee",
+                    desc: "Caffeine causes bleeding and poor color retention. This is critical!"
+                },
+                {
+                    icon: "fa-wine-glass-empty",
+                    title: "24h Before: No Alcohol",
+                    desc: "Alcohol thins the blood. Please avoid it completely."
+                },
+                {
+                    icon: "fa-syringe",
+                    title: "4 Weeks: No Botox",
+                    desc: "Botox must be done at least 4 weeks prior to your appointment."
+                },
+                {
+                    icon: "fa-sun",
+                    title: "1 Week: No Sun",
+                    desc: "We cannot work on sunburned or freshly tanned skin."
+                }
+            ]
+        };
+
+        // --- 2. RENDER FUNCTIONS (Это должно лежать в js/app.js) ---
+
+        function renderServices() {
+            const container = document.getElementById('services-container');
+            if (!container) return;
+            container.innerHTML = ''; // Clear loading
+
+            siteData.services.forEach(service => {
+                const isPopular = service.popular 
+                    ? `<div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#bf953f] text-white px-3 py-1 text-[9px] uppercase tracking-widest">Most Popular</div>` 
+                    : '';
+                const borderClass = service.popular ? 'border-t-2 border-[#bf953f]' : '';
+
+                const html = `
+                <div class="bg-white p-12 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(191,149,63,0.15)] transition duration-500 hover:-translate-y-2 group relative ${borderClass}">
+                    ${isPopular}
+                    <div class="text-[#bf953f] text-4xl mb-8 opacity-80 group-hover:opacity-100 transition"><i class="fa-solid ${service.icon}"></i></div>
+                    <h3 class="font-logo text-2xl mb-6 text-dark tracking-wide">${service.title}</h3>
+                    <p class="text-grey font-light text-sm mb-10 leading-relaxed min-h-[80px]">${service.description}</p>
+                    <div class="flex justify-between items-center border-t border-gray-100 pt-8">
+                        <span class="text-[10px] uppercase tracking-widest font-bold text-gray-400">${service.time}</span>
+                        <span class="gold-text-style font-serif text-2xl italic">${service.price}</span>
+                    </div>
+                </div>
+                `;
+                container.innerHTML += html;
+            });
+        }
+
+        function renderPreCare() {
+            const list = document.getElementById('precare-list');
+            if (!list) return;
+            list.innerHTML = '';
+
+            siteData.preCare.forEach(item => {
+                const html = `
+                <li class="flex items-start">
+                    <i class="fa-solid ${item.icon} text-[#bf953f] mt-1 mr-4"></i>
+                    <div>
+                        <span class="block text-sm font-bold uppercase tracking-wide">${item.title}</span>
+                        <span class="text-xs text-gray-500">${item.desc}</span>
+                    </div>
+                </li>
+                `;
+                list.innerHTML += html;
+            });
+        }
+
+        // --- 3. INIT ---
+        document.addEventListener('DOMContentLoaded', () => {
+            renderServices();
+            renderPreCare();
+            
+            // Mobile Menu Logic
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            if(btn && menu) {
+                btn.addEventListener('click', () => { menu.classList.toggle('hidden'); });
+                document.querySelectorAll('#mobile-menu a').forEach(link => { 
+                    link.addEventListener('click', () => { menu.classList.add('hidden'); }); 
+                });
+            }
+        });
     </script>
 </body>
 </html>
