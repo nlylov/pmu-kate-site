@@ -271,9 +271,8 @@
                     <h3 class="font-logo text-3xl mb-10 text-dark">Request Booking</h3>
                     
                     <!-- 
-                       ВАЖНО: Форма должна быть простой, а JavaScript (внизу) перехватит отправку.
-                       Убрали action из HTML, чтобы не было конфликтов, 
-                       JS сам отправит данные и перекинет на success.html
+                       ВАЖНО: Добавлен id="booking-form".
+                       Атрибут action убран, так как скрипт ниже сам обработает отправку.
                     -->
                     <form id="booking-form" name="booking" method="POST" data-netlify="true">
                         <input type="hidden" name="form-name" value="booking">
@@ -314,7 +313,7 @@
         </div>
     </footer>
 
-    <!-- MAIN SCRIPT -->
+    <!-- MAIN SCRIPT (Здесь вся магия) -->
     <script>
         // --- 1. JSON DATA ---
         const siteData = {
