@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Kate Pedak</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#111111',
+                        gold: '#bf953f',
+                    },
+                    fontFamily: {
+                        logo: ['Cinzel', 'serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .btn-gold {
+            background: linear-gradient(to right, #bf953f, #aa771c);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .btn-gold:hover { opacity: 0.95; transform: translateY(-1px); }
+    </style>
+</head>
+<body class="font-sans text-dark bg-white antialiased h-screen flex flex-col items-center justify-center text-center px-4">
+
+    <div class="mb-8">
+        <span class="text-[#bf953f] font-logo text-6xl block mb-2">KP</span>
+        <span class="text-gray-400 text-xs uppercase tracking-[0.4em]">Kate Pedak NYC</span>
+    </div>
+
+    <h1 class="font-logo text-4xl md:text-5xl mb-6">Request Received</h1>
+    <p class="font-light text-gray-600 text-lg max-w-md mb-10 leading-relaxed">
+        Thank you for your inquiry. <br>
+        We will get back to you shortly to confirm your appointment details.
+    </p>
+
+    <a href="/" class="btn-gold px-12 py-4 uppercase text-[11px] tracking-[0.2em] font-bold rounded-sm shadow-xl">
+        Back to Home
+    </a>
+
+</body>
+</html>
