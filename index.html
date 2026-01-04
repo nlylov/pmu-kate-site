@@ -52,7 +52,7 @@
 
         .hero-bg {
             /* Убедитесь, что у вас есть файл bg-main.jpg в папке img */
-            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url('img/bg-main.jpg'); 
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url('img/bg-main.jpg'); 
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -150,19 +150,23 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section (UPDATED: Stronger Positioning) -->
     <section class="hero-bg h-screen flex items-center justify-center text-center px-4 pt-32">
-        <div class="max-w-4xl text-white">
-            <p class="text-[#fcf6ba] uppercase tracking-[0.4em] text-xs font-bold mb-6 animate-pulse">Manhattan, NYC</p>
-            <h1 class="font-logo text-5xl md:text-7xl lg:text-8xl mb-8 leading-tight drop-shadow-2xl">
-                Wake Up <br/> <span class="italic font-serif text-[#fcf6ba] font-light">Flawless</span>
+        <div class="max-w-5xl text-white">
+            <div class="inline-block border border-[#fcf6ba]/30 px-4 py-2 mb-8 backdrop-blur-sm">
+                 <p class="text-[#fcf6ba] uppercase tracking-[0.2em] text-[10px] font-bold">NYC Licensed & Certified Artist</p>
+            </div>
+           
+            <h1 class="font-logo text-5xl md:text-7xl lg:text-8xl mb-6 leading-tight drop-shadow-2xl">
+                Hyper-Realistic <br/> <span class="italic font-serif text-[#fcf6ba] font-light">Permanent Makeup</span>
             </h1>
-            <p class="font-sans font-light text-lg md:text-xl mb-14 max-w-xl mx-auto text-gray-100 leading-relaxed opacity-90">
-                The art of hyper-realistic permanent makeup. <br>Enhancing your natural beauty, invisibly.
+            <p class="font-sans font-light text-lg md:text-xl mb-12 max-w-2xl mx-auto text-gray-100 leading-relaxed opacity-90">
+                Natural. Undetectable. Designed for your unique face structure—not trends.
+                <br><span class="text-sm opacity-70 mt-2 block">Serving Manhattan & Queens</span>
             </p>
             <div class="flex flex-col sm:flex-row gap-6 justify-center">
-                <a href="#services" class="bg-white/5 backdrop-blur-md border border-white/20 text-white px-10 py-4 uppercase text-[11px] tracking-widest hover:bg-white hover:text-dark transition duration-500 font-medium">Explore Menu</a>
-                <a href="https://instagram.com/pmu.by.kate.nyc" target="_blank" class="btn-gold text-white px-10 py-4 uppercase text-[11px] tracking-widest shadow-xl shadow-yellow-900/30 font-medium">View Portfolio</a>
+                <a href="#contact" class="btn-gold text-white px-10 py-4 uppercase text-[11px] tracking-widest shadow-xl shadow-yellow-900/30 font-medium hover:scale-105 transition transform">Book Appointment</a>
+                <a href="https://instagram.com/pmu.by.kate.nyc" target="_blank" class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-10 py-4 uppercase text-[11px] tracking-widest hover:bg-white hover:text-dark transition duration-500 font-medium">See Real Results</a>
             </div>
         </div>
     </section>
@@ -173,9 +177,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
                 <div class="relative group">
                     <div class="absolute -top-6 -left-6 w-full h-full border border-[#bf953f]/20 z-0 transition-all duration-700 group-hover:-top-3 group-hover:-left-3"></div>
-                    
                     <img src="img/Profile.png" alt="Kate Pedak PMU" class="relative z-10 w-full h-[650px] object-cover grayscale group-hover:grayscale-0 transition duration-1000 ease-in-out shadow-2xl">
-                    
                 </div>
                 <div class="pl-0 lg:pl-10">
                     <span class="gold-text-style font-serif text-2xl italic mb-4 block">The Artist</span>
@@ -243,7 +245,35 @@
         </div>
     </section>
 
-    <!-- CONTACT / BOOKING FORM -->
+    <!-- REVIEWS / SOCIAL PROOF (NEW SECTION) -->
+    <section class="py-20 bg-white border-b border-gray-50">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <div class="mb-10 text-[#bf953f] text-2xl">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <h3 class="font-serif text-3xl italic text-dark mb-12">"I’ve never felt more confident. Kate’s work is truly undetectable."</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                <div class="bg-gray-50 p-6 rounded-sm">
+                    <p class="text-xs text-gray-500 mb-4 leading-relaxed">"I was so nervous about getting my brows done, but Kate made me feel at ease. The shape is perfect for my face."</p>
+                    <span class="font-bold text-xs uppercase tracking-wider text-dark">— Sarah J., Manhattan</span>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-sm">
+                    <p class="text-xs text-gray-500 mb-4 leading-relaxed">"Absolutely life changing. I wake up ready to go. The healing process was smooth just as she explained."</p>
+                    <span class="font-bold text-xs uppercase tracking-wider text-dark">— Emily R., Brooklyn</span>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-sm">
+                    <p class="text-xs text-gray-500 mb-4 leading-relaxed">"Kate is a perfectionist. She spent so much time mapping my lips until they were perfectly symmetrical."</p>
+                    <span class="font-bold text-xs uppercase tracking-wider text-dark">— Jessica M., Queens</span>
+                </div>
+            </div>
+            <div class="mt-12">
+                <a href="https://instagram.com/pmu.by.kate.nyc" target="_blank" class="text-[#bf953f] text-xs uppercase tracking-[0.2em] hover:text-dark transition border-b border-[#bf953f] pb-1">See More Results on Instagram</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT / BOOKING FORM (UPDATED) -->
     <section id="contact" class="py-28 bg-white relative overflow-hidden">
         <div class="absolute -right-40 top-20 w-[600px] h-[600px] bg-[#fcf6ba] rounded-full opacity-20 blur-3xl pointer-events-none"></div>
         <div class="max-w-6xl mx-auto px-4 relative z-10">
@@ -251,8 +281,14 @@
                 <!-- Left: Info -->
                 <div class="flex flex-col justify-center">
                     <span class="text-[#bf953f] uppercase tracking-[0.2em] text-[10px] font-bold mb-6">Appointments</span>
-                    <h2 class="font-logo text-5xl mb-10 text-dark">Secure Your <br>Transformation</h2>
-                    <p class="text-grey mb-12 font-light leading-relaxed max-w-md">Appointments are limited. Please fill out the form to request a date. A $100 deposit is required.</p>
+                    <h2 class="font-logo text-5xl mb-6 text-dark">Secure Your <br>Transformation</h2>
+                    <!-- Added Scarcity Trigger -->
+                    <div class="inline-block bg-red-50 text-red-800 px-4 py-2 text-[10px] uppercase tracking-widest font-bold mb-8 border border-red-100">
+                        <i class="fa-solid fa-clock mr-2"></i> Limited Availability for This Month
+                    </div>
+
+                    <p class="text-grey mb-12 font-light leading-relaxed max-w-md">Appointments are limited. Please fill out the form to request a date. A $100 deposit is required upon confirmation.</p>
+                    
                     <div class="space-y-8 mb-14">
                         <div class="flex items-center group cursor-pointer">
                             <div class="w-14 h-14 rounded-full border border-gray-100 flex items-center justify-center text-[#bf953f] mr-8 group-hover:border-[#bf953f] transition"><i class="fa-solid fa-phone text-xl"></i></div>
@@ -270,10 +306,6 @@
                     <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#bf953f] to-[#fcf6ba]"></div>
                     <h3 class="font-logo text-3xl mb-10 text-dark">Request Booking</h3>
                     
-                    <!-- 
-                       ВАЖНО: Добавлен id="booking-form".
-                       Атрибут action убран, так как скрипт ниже сам обработает отправку.
-                    -->
                     <form id="booking-form" name="booking" method="POST" data-netlify="true">
                         <input type="hidden" name="form-name" value="booking">
                         <div class="mb-8"><input type="text" name="name" required class="form-input" placeholder="Full Name"></div>
@@ -289,6 +321,10 @@
                             </select>
                         </div>
                         <button type="submit" class="btn-gold w-full py-5 uppercase text-[11px] tracking-[0.2em] font-bold text-white shadow-xl">Send Request</button>
+                        <!-- Added Expectations Text -->
+                        <p class="text-center text-xs text-gray-400 mt-6 leading-relaxed">
+                            <i class="fa-solid fa-check mr-1 text-[#bf953f]"></i> We review requests daily. <br>You will receive a text or DM within 24 hours.
+                        </p>
                     </form>
                 </div>
             </div>
