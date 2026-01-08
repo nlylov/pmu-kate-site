@@ -6,14 +6,14 @@
     
     <!-- SEO & Meta Tags -->
     <title>Kate Pedak | Permanent Makeup NYC | Powder Brows & Lip Blush</title>
-    <meta name="description" content="Premium Permanent Makeup in Manhattan, NYC by Kate Pedak. Specializing in hyper-realistic Powder Brows, Lip Blush, and Eyeliner. Natural, undetectable results.">
-    <meta name="keywords" content="Permanent Makeup NYC, Powder Brows Manhattan, Lip Blush NYC, Kate Pedak, PMU Artist New York, Microshading, Eyeliner Tattoo">
+    <meta name="description" content="Premium Permanent Makeup in Manhattan & Queens, NYC. Specializing in hyper-realistic Powder Brows, Lip Blush, and Eyeliner. Natural results.">
+    <meta name="keywords" content="Permanent Makeup NYC, Powder Brows Manhattan, Lip Blush Queens, Microblading alternative NYC, Kate Pedak, PMU Rego Park">
     <meta name="author" content="Kate Pedak">
     <meta name="robots" content="index, follow">
 
     <!-- Social Media Tags (Open Graph) -->
     <meta property="og:title" content="Kate Pedak | Hyper-Realistic Permanent Makeup NYC">
-    <meta property="og:description" content="Wake up flawless. Premium permanent makeup designed for your unique face structure. Located in Manhattan.">
+    <meta property="og:description" content="Wake up flawless. Premium permanent makeup designed for your unique face structure. Serving Manhattan & Queens.">
     <meta property="og:image" content="https://pedak.beauty/img/portfolio-1.png">
     <meta property="og:url" content="https://pedak.beauty">
     <meta property="og:type" content="website">
@@ -66,7 +66,6 @@
         }
 
         .hero-bg {
-            /* Фон главного экрана */
             background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url('img/bg-main.jpg'); 
             background-size: cover;
             background-position: center;
@@ -103,47 +102,38 @@
         .portfolio-overlay {
             background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
         }
+        
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
     </style>
 </head>
 <body class="font-sans text-dark bg-white antialiased">
 
     <!-- Navigation -->
-    <!-- Убрал фиксированную высоту (lg:h-32), чтобы шапка могла растягиваться под размер логотипа -->
     <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-xl border-b border-gray-100/50 transition-all duration-300 py-3" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center md:flex-col lg:flex-row h-auto">
                 
                 <!-- Left Menu -->
-                <div class="hidden lg:flex space-x-12 items-center w-1/3 justify-start">
+                <div class="hidden lg:flex space-x-8 items-center w-1/3 justify-start">
                     <a href="#about" class="text-[11px] uppercase tracking-widest hover:text-[#bf953f] transition font-medium">About</a>
                     <a href="#services" class="text-[11px] uppercase tracking-widest hover:text-[#bf953f] transition font-medium">Services</a>
+                    <a href="#faq" class="text-[11px] uppercase tracking-widest hover:text-[#bf953f] transition font-medium">FAQ</a>
                 </div>
 
-                <!-- CENTER LOGO (IMAGE) -->
+                <!-- CENTER LOGO -->
                 <div class="flex-shrink-0 flex flex-col items-center justify-center w-full lg:w-1/3 cursor-pointer group py-2" onclick="window.scrollTo(0,0)">
-                    <!-- 
-                        УВЕЛИЧЕН РАЗМЕР: 
-                        Было h-24 (96px). 
-                        Стало h-32 (128px) на мобильных и h-40 (160px) на компьютерах.
-                        Это даст логотипу с текстом достаточно места.
-                    -->
                     <div class="h-32 md:h-40 w-full flex items-center justify-center mb-0">
                         <img src="img/logo.png" alt="Kate Pedak PMU Logo" class="h-full w-auto object-contain">
-                    </div>
-                    
-                    <!-- 
-                        СКРЫТ ТЕКСТ:
-                        Так как текст уже есть на картинке логотипа, этот блок скрыт (style="display:none"),
-                        чтобы не было дублирования.
-                    -->
-                    <div class="text-center" style="display: none;">
-                        <span class="gold-text-style font-logo text-2xl tracking-widest uppercase block leading-none" style="letter-spacing: 0.15em;">Kate Pedak</span>
-                        <span class="gold-text-style font-sans text-[0.6rem] tracking-[0.4em] uppercase block mt-2 text-[#bf953f] font-medium">Permanent Makeup</span>
                     </div>
                 </div>
                 
                 <!-- Right Menu -->
-                <div class="hidden lg:flex space-x-12 items-center w-1/3 justify-end">
+                <div class="hidden lg:flex space-x-8 items-center w-1/3 justify-end">
                     <a href="#portfolio" class="text-[11px] uppercase tracking-widest hover:text-[#bf953f] transition font-medium">Portfolio</a>
                     <a href="#contact" class="btn-gold px-10 py-3 uppercase text-[10px] tracking-widest rounded-sm font-semibold shadow-lg">Book Now</a>
                 </div>
@@ -163,6 +153,7 @@
                 <a href="#about" class="block text-sm uppercase tracking-widest hover:text-[#bf953f]">About</a>
                 <a href="#services" class="block text-sm uppercase tracking-widest hover:text-[#bf953f]">Services</a>
                 <a href="#portfolio" class="block text-sm uppercase tracking-widest hover:text-[#bf953f]">Portfolio</a>
+                <a href="#faq" class="block text-sm uppercase tracking-widest hover:text-[#bf953f]">FAQ</a>
                 <a href="#contact" class="block btn-gold text-white py-4 uppercase text-xs tracking-widest mt-4">Book Appointment</a>
             </div>
         </div>
@@ -180,7 +171,7 @@
             </h1>
             <p class="font-sans font-light text-lg md:text-xl mb-12 max-w-2xl mx-auto text-gray-100 leading-relaxed opacity-90">
                 Natural. Undetectable. Designed for your unique face structure—not trends.
-                <br><span class="text-sm opacity-70 mt-2 block">Serving Manhattan & Queens</span>
+                <br><span class="text-sm opacity-70 mt-2 block font-medium">Serving Manhattan & Queens</span>
             </p>
             <div class="flex flex-col sm:flex-row gap-6 justify-center">
                 <a href="#contact" class="btn-gold text-white px-10 py-4 uppercase text-[11px] tracking-widest shadow-xl shadow-yellow-900/30 font-medium hover:scale-105 transition transform">Book Appointment</a>
@@ -223,6 +214,13 @@
             
             <div id="services-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- JS will inject services here -->
+            </div>
+            
+            <!-- Clarification for Touch Ups -->
+            <div class="text-center mt-12 max-w-2xl mx-auto">
+                <p class="text-xs text-gray-400 italic">
+                    * Initial touch-up pricing applies only within 30 days of the original procedure. Appointments scheduled beyond this period are considered a new service or annual refresher.
+                </p>
             </div>
         </div>
     </section>
@@ -306,6 +304,71 @@
         </div>
     </section>
 
+    <!-- FAQ SECTION -->
+    <section id="faq" class="py-24 bg-[#fafafa]">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-16">
+                <span class="text-[#bf953f] uppercase tracking-[0.4em] text-[10px] font-bold">Common Questions</span>
+                <h2 class="font-logo text-4xl mt-4 text-dark">FAQ</h2>
+            </div>
+
+            <div class="space-y-4">
+                <!-- Microblading Question (Softened & Educational) -->
+                <details class="group bg-white p-6 rounded-sm shadow-sm cursor-pointer border border-transparent hover:border-[#bf953f]/30 transition-all duration-300">
+                    <summary class="flex justify-between items-center font-serif text-lg text-dark">
+                        <span>Do you offer microblading?</span>
+                        <span class="text-[#bf953f] text-xl transition-transform group-open:rotate-45">+</span>
+                    </summary>
+                    <div class="mt-4 text-gray-600 font-light text-sm leading-relaxed pl-2 border-l-2 border-[#bf953f]">
+                        <p class="mb-2">No, I specialize in <strong>Powder and Ombré Brows</strong>.</p>
+                        <p>Microblading uses manual strokes, while powder brows use soft shading. Many clients prefer powder brows for a smoother, more natural healed finish and more predictable fading over time.</p>
+                    </div>
+                </details>
+
+                <details class="group bg-white p-6 rounded-sm shadow-sm cursor-pointer border border-transparent hover:border-[#bf953f]/30 transition-all duration-300">
+                    <summary class="flex justify-between items-center font-serif text-lg text-dark">
+                        <span>Is permanent makeup painful?</span>
+                        <span class="text-[#bf953f] text-xl transition-transform group-open:rotate-45">+</span>
+                    </summary>
+                    <div class="mt-4 text-gray-600 font-light text-sm leading-relaxed pl-2 border-l-2 border-[#bf953f]">
+                        <p>Comfort is a priority. High-quality topical numbing is applied before and during the procedure. Most clients describe the sensation as very manageable and rate the pain level as low (1-2 out of 10).</p>
+                    </div>
+                </details>
+
+                <details class="group bg-white p-6 rounded-sm shadow-sm cursor-pointer border border-transparent hover:border-[#bf953f]/30 transition-all duration-300">
+                    <summary class="flex justify-between items-center font-serif text-lg text-dark">
+                        <span>How long does it last?</span>
+                        <span class="text-[#bf953f] text-xl transition-transform group-open:rotate-45">+</span>
+                    </summary>
+                    <div class="mt-4 text-gray-600 font-light text-sm leading-relaxed pl-2 border-l-2 border-[#bf953f]">
+                        <p>Results are long-lasting but not permanent forever. Depending on your skin type and lifestyle, results typically last 1-3 years. Color fades gradually and can be refreshed with touch-ups to maintain a perfect, natural look.</p>
+                    </div>
+                </details>
+
+                <!-- Deposit FAQ (Updated Clarity) -->
+                <details class="group bg-white p-6 rounded-sm shadow-sm cursor-pointer border border-transparent hover:border-[#bf953f]/30 transition-all duration-300">
+                    <summary class="flex justify-between items-center font-serif text-lg text-dark">
+                        <span>Do you require a deposit?</span>
+                        <span class="text-[#bf953f] text-xl transition-transform group-open:rotate-45">+</span>
+                    </summary>
+                    <div class="mt-4 text-gray-600 font-light text-sm leading-relaxed pl-2 border-l-2 border-[#bf953f]">
+                        <p>Yes. A <strong>$30 deposit</strong> is required after we confirm your appointment time. It goes toward your final total and ensures availability for your session.</p>
+                    </div>
+                </details>
+
+                <details class="group bg-white p-6 rounded-sm shadow-sm cursor-pointer border border-transparent hover:border-[#bf953f]/30 transition-all duration-300">
+                    <summary class="flex justify-between items-center font-serif text-lg text-dark">
+                        <span>Where are you located?</span>
+                        <span class="text-[#bf953f] text-xl transition-transform group-open:rotate-45">+</span>
+                    </summary>
+                    <div class="mt-4 text-gray-600 font-light text-sm leading-relaxed pl-2 border-l-2 border-[#bf953f]">
+                        <p>Appointments are available in two convenient NYC locations: <strong>Manhattan</strong> and <strong>Queens (Rego Park)</strong>. Please confirm your preferred location when booking.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
     <!-- CONTACT / BOOKING FORM -->
     <section id="contact" class="py-28 bg-white relative overflow-hidden">
         <div class="absolute -right-40 top-20 w-[600px] h-[600px] bg-[#fcf6ba] rounded-full opacity-20 blur-3xl pointer-events-none"></div>
@@ -315,11 +378,30 @@
                 <div class="flex flex-col justify-center">
                     <span class="text-[#bf953f] uppercase tracking-[0.2em] text-[10px] font-bold mb-6">Appointments</span>
                     <h2 class="font-logo text-5xl mb-6 text-dark">Secure Your <br>Transformation</h2>
-                    <div class="inline-block bg-red-50 text-red-800 px-4 py-2 text-[10px] uppercase tracking-widest font-bold mb-8 border border-red-100">
+                    
+                    <!-- Limited Availability -->
+                    <div class="inline-block bg-red-50 text-red-800 px-4 py-2 text-[10px] uppercase tracking-widest font-bold mb-6 border border-red-100">
                         <i class="fa-solid fa-clock mr-2"></i> Limited Availability for This Month
                     </div>
 
-                    <p class="text-grey mb-12 font-light leading-relaxed max-w-md">Appointments are limited. Please fill out the form to request a date. A $30 deposit is required upon confirmation.</p>
+                    <!-- TRUST SIGNALS (NEW!) -->
+                    <div class="mb-8 space-y-2">
+                        <div class="flex items-center text-sm text-gray-600 font-light">
+                            <i class="fa-solid fa-certificate text-[#bf953f] w-6"></i>
+                            <span>NYC Licensed & Certified</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600 font-light">
+                            <i class="fa-solid fa-pump-medical text-[#bf953f] w-6"></i>
+                            <span>Sterile, single-use supplies</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600 font-light">
+                            <i class="fa-solid fa-wand-sparkles text-[#bf953f] w-6"></i>
+                            <span>Natural healed results — not harsh makeup</span>
+                        </div>
+                    </div>
+
+                    <p class="text-grey mb-12 font-light leading-relaxed max-w-md">Appointments are limited. Please fill out the form to request a date. A $30 deposit is required to confirm your appointment.</p>
+                    <p class="text-sm font-medium mb-8 text-dark">Serving Manhattan & Queens (Rego Park)</p>
                     
                     <div class="space-y-8 mb-14">
                         <div class="flex items-center group cursor-pointer">
@@ -350,9 +432,9 @@
                                 <option>Lip Blush ($440)</option>
                                 <option>Lip Neutralization ($440)</option>
                                 <option>Eyeliner ($290)</option>
-                                <option>Brows Touch Up ($190)</option>
-                                <option>Lip Blush Touch Up ($230)</option>
-                                <option>Eyeliner Touch Up ($150)</option>
+                                <option>Brows Initial Touch-Up ($190)</option>
+                                <option>Lip Blush Initial Touch-Up ($230)</option>
+                                <option>Eyeliner Initial Touch-Up ($150)</option>
                                 <option>Consultation</option>
                             </select>
                         </div>
@@ -371,14 +453,10 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="flex justify-center mb-10">
                  <div class="text-center group cursor-pointer" onclick="window.scrollTo(0,0)">
-                    <!-- 
-                        УВЕЛИЧЕН РАЗМЕР В ФУТЕРЕ:
-                        Было h-16 (64px). Стало h-24 (96px).
-                    -->
                     <div class="h-24 w-full flex items-center justify-center mb-4">
                         <img src="img/logo.png" alt="Kate Pedak PMU Logo" class="h-full w-auto object-contain opacity-80 group-hover:opacity-100 transition">
                     </div>
-                    <span class="text-gray-500 font-sans text-[0.6rem] tracking-[0.4em] uppercase block group-hover:text-[#bf953f] transition">Kate Pedak NYC</span>
+                    <span class="text-gray-500 font-sans text-[0.6rem] tracking-[0.4em] uppercase block group-hover:text-[#bf953f] transition">Kate Pedak NYC · Manhattan & Queens</span>
                 </div>
             </div>
             <div class="flex justify-center space-x-10 mb-12">
@@ -427,38 +505,39 @@
                     price: "$290",
                     popular: false
                 },
+                // --- UPDATED TOUCH UP DESCRIPTIONS (Initial within 30 days) ---
                 {
                     id: "brows-touch",
                     icon: "fa-rotate",
-                    title: "Brows Touch Up",
-                    description: "Maintenance session to refresh color and shape (Monthly).",
+                    title: "Brows Initial Touch-Up",
+                    description: "Follow-up session to perfect color and shape after your initial procedure. Valid only within 30 days of the original appointment.",
                     price: "$190",
                     popular: false
                 },
                 {
                     id: "lips-touch",
                     icon: "fa-rotate",
-                    title: "Lip Blush Touch Up",
-                    description: "Maintenance session to refresh color and shape (Monthly).",
+                    title: "Lip Blush Initial Touch-Up",
+                    description: "Designed to refine color and balance healing results. Available only within 30 days after the initial Lip Blush procedure.",
                     price: "$230",
                     popular: false
                 },
                 {
                     id: "eyes-touch",
                     icon: "fa-rotate",
-                    title: "Eyeliner Touch Up",
-                    description: "Maintenance session to refresh color and shape (Monthly).",
+                    title: "Eyeliner Initial Touch-Up",
+                    description: "Final adjustment session to ensure clean definition and symmetry. Must be completed within 30 days of the original procedure.",
                     price: "$150",
                     popular: false
                 }
             ],
-            // Portfolio updated to PNG
+            // Portfolio Updated Captions for SEO
             portfolio: [
-                { img: "img/portfolio-1.png", alt: "Powder Brows Result", fallback: "https://images.unsplash.com/photo-1620802052148-348f99c85584?q=80&w=1965&auto=format&fit=crop" },
-                { img: "img/portfolio-2.png", alt: "Lip Blush Result", fallback: "https://images.unsplash.com/photo-1596704017254-9b1b1848fb62?q=80&w=2070&auto=format&fit=crop" },
-                { img: "img/portfolio-3.png", alt: "Eyeliner Result", fallback: "https://images.unsplash.com/photo-1588510883389-98c4b7b34e2c?q=80&w=2070&auto=format&fit=crop" },
-                { img: "img/portfolio-4.png", alt: "Healed Brows", fallback: "https://images.unsplash.com/photo-1620802052148-348f99c85584?q=80&w=1965&auto=format&fit=crop" },
-                { img: "img/portfolio-5.png", alt: "Lip Neutralization", fallback: "https://images.unsplash.com/photo-1596704017254-9b1b1848fb62?q=80&w=2070&auto=format&fit=crop" },
+                { img: "img/portfolio-1.png", alt: "Powder Brows — healed result", fallback: "https://images.unsplash.com/photo-1620802052148-348f99c85584?q=80&w=1965&auto=format&fit=crop" },
+                { img: "img/portfolio-2.png", alt: "Lip Blush — healed, soft watercolor tint", fallback: "https://images.unsplash.com/photo-1596704017254-9b1b1848fb62?q=80&w=2070&auto=format&fit=crop" },
+                { img: "img/portfolio-3.png", alt: "Lash Line Enhancement — natural definition", fallback: "https://images.unsplash.com/photo-1588510883389-98c4b7b34e2c?q=80&w=2070&auto=format&fit=crop" },
+                { img: "img/portfolio-4.png", alt: "Healed Brows — natural finish", fallback: "https://images.unsplash.com/photo-1620802052148-348f99c85584?q=80&w=1965&auto=format&fit=crop" },
+                { img: "img/portfolio-5.png", alt: "Lip Neutralization — tone correction", fallback: "https://images.unsplash.com/photo-1596704017254-9b1b1848fb62?q=80&w=2070&auto=format&fit=crop" },
                 { img: "img/portfolio-6.png", alt: "Studio Process", fallback: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=2069&auto=format&fit=crop" }
             ],
             preCare: [
