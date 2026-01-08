@@ -3,8 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kate Pedak | Permanent Makeup NYC</title>
-    <meta name="description" content="Premium Permanent Makeup in NYC by Kate Pedak. Powder Brows, Lip Blush, and Eyeliner.">
+    
+    <!-- SEO & Meta Tags -->
+    <title>Kate Pedak | Permanent Makeup NYC | Powder Brows & Lip Blush</title>
+    <meta name="description" content="Premium Permanent Makeup in Manhattan, NYC by Kate Pedak. Specializing in hyper-realistic Powder Brows, Lip Blush, and Eyeliner. Natural, undetectable results.">
+    <meta name="keywords" content="Permanent Makeup NYC, Powder Brows Manhattan, Lip Blush NYC, Kate Pedak, PMU Artist New York, Microshading, Eyeliner Tattoo">
+    <meta name="author" content="Kate Pedak">
+    <meta name="robots" content="index, follow">
+
+    <!-- Social Media Tags (Open Graph) -->
+    <meta property="og:title" content="Kate Pedak | Hyper-Realistic Permanent Makeup NYC">
+    <meta property="og:description" content="Wake up flawless. Premium permanent makeup designed for your unique face structure. Located in Manhattan.">
+    <meta property="og:image" content="https://pedak.beauty/img/portfolio-1.png">
+    <meta property="og:url" content="https://pedak.beauty">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/favicon.png">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -51,7 +66,7 @@
         }
 
         .hero-bg {
-            /* Убедитесь, что у вас есть файл bg-main.jpg в папке img */
+            /* Фон главного экрана */
             background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url('img/bg-main.jpg'); 
             background-size: cover;
             background-position: center;
@@ -80,14 +95,23 @@
             font-weight: 300;
         }
         .form-input:focus { border-bottom-color: #bf953f; }
+
+        .portfolio-item {
+            overflow: hidden;
+            position: relative;
+        }
+        .portfolio-overlay {
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+        }
     </style>
 </head>
 <body class="font-sans text-dark bg-white antialiased">
 
     <!-- Navigation -->
+    <!-- Убрал фиксированную высоту (lg:h-32), чтобы шапка могла растягиваться под размер логотипа -->
     <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-xl border-b border-gray-100/50 transition-all duration-300 py-3" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center md:flex-col lg:flex-row h-auto lg:h-32">
+            <div class="flex justify-between items-center md:flex-col lg:flex-row h-auto">
                 
                 <!-- Left Menu -->
                 <div class="hidden lg:flex space-x-12 items-center w-1/3 justify-start">
@@ -95,30 +119,24 @@
                     <a href="#services" class="text-[11px] uppercase tracking-widest hover:text-[#bf953f] transition font-medium">Services</a>
                 </div>
 
-                <!-- CENTER LOGO -->
-                <div class="flex-shrink-0 flex flex-col items-center justify-center w-full lg:w-1/3 cursor-pointer group" onclick="window.scrollTo(0,0)">
-                    <div class="h-20 w-full flex items-center justify-center mb-1">
-                        <svg width="100%" height="100%" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
-                            <defs>
-                                <linearGradient id="gold-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" style="stop-color:#cfc09f;stop-opacity:1" />
-                                    <stop offset="20%" style="stop-color:#ffecb3;stop-opacity:1" />
-                                    <stop offset="40%" style="stop-color:#bf953f;stop-opacity:1" />
-                                    <stop offset="60%" style="stop-color:#996515;stop-opacity:1" />
-                                    <stop offset="80%" style="stop-color:#fcf6ba;stop-opacity:1" />
-                                    <stop offset="100%" style="stop-color:#b38728;stop-opacity:1" />
-                                </linearGradient>
-                                <filter id="dropShadow" x="-20%" y="-20%" width="140%" height="140%">
-                                    <feGaussianBlur in="SourceAlpha" stdDeviation="1"/>
-                                    <feOffset dx="1" dy="1" result="offsetblur"/>
-                                    <feComponentTransfer><feFuncA type="linear" slope="0.3"/></feComponentTransfer>
-                                    <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
-                                </filter>
-                            </defs>
-                            <text x="50%" y="85%" text-anchor="middle" font-family="'Cinzel', serif" font-weight="400" font-size="100" class="gold-fill" style="letter-spacing: -5px; filter: url(#dropShadow);">KP</text>
-                        </svg>
+                <!-- CENTER LOGO (IMAGE) -->
+                <div class="flex-shrink-0 flex flex-col items-center justify-center w-full lg:w-1/3 cursor-pointer group py-2" onclick="window.scrollTo(0,0)">
+                    <!-- 
+                        УВЕЛИЧЕН РАЗМЕР: 
+                        Было h-24 (96px). 
+                        Стало h-32 (128px) на мобильных и h-40 (160px) на компьютерах.
+                        Это даст логотипу с текстом достаточно места.
+                    -->
+                    <div class="h-32 md:h-40 w-full flex items-center justify-center mb-0">
+                        <img src="img/logo.png" alt="Kate Pedak PMU Logo" class="h-full w-auto object-contain">
                     </div>
-                    <div class="text-center -mt-2">
+                    
+                    <!-- 
+                        СКРЫТ ТЕКСТ:
+                        Так как текст уже есть на картинке логотипа, этот блок скрыт (style="display:none"),
+                        чтобы не было дублирования.
+                    -->
+                    <div class="text-center" style="display: none;">
                         <span class="gold-text-style font-logo text-2xl tracking-widest uppercase block leading-none" style="letter-spacing: 0.15em;">Kate Pedak</span>
                         <span class="gold-text-style font-sans text-[0.6rem] tracking-[0.4em] uppercase block mt-2 text-[#bf953f] font-medium">Permanent Makeup</span>
                     </div>
@@ -126,7 +144,7 @@
                 
                 <!-- Right Menu -->
                 <div class="hidden lg:flex space-x-12 items-center w-1/3 justify-end">
-                    <a href="#process" class="text-[11px] uppercase tracking-widest hover:text-[#bf953f] transition font-medium">Pre-Care</a>
+                    <a href="#portfolio" class="text-[11px] uppercase tracking-widest hover:text-[#bf953f] transition font-medium">Portfolio</a>
                     <a href="#contact" class="btn-gold px-10 py-3 uppercase text-[10px] tracking-widest rounded-sm font-semibold shadow-lg">Book Now</a>
                 </div>
 
@@ -144,13 +162,13 @@
             <div class="px-6 py-8 space-y-6 text-center">
                 <a href="#about" class="block text-sm uppercase tracking-widest hover:text-[#bf953f]">About</a>
                 <a href="#services" class="block text-sm uppercase tracking-widest hover:text-[#bf953f]">Services</a>
-                <a href="#process" class="block text-sm uppercase tracking-widest hover:text-[#bf953f]">Pre-Care</a>
+                <a href="#portfolio" class="block text-sm uppercase tracking-widest hover:text-[#bf953f]">Portfolio</a>
                 <a href="#contact" class="block btn-gold text-white py-4 uppercase text-xs tracking-widest mt-4">Book Appointment</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section (UPDATED: Stronger Positioning) -->
+    <!-- Hero Section -->
     <section class="hero-bg h-screen flex items-center justify-center text-center px-4 pt-32">
         <div class="max-w-5xl text-white">
             <div class="inline-block border border-[#fcf6ba]/30 px-4 py-2 mb-8 backdrop-blur-sm">
@@ -200,11 +218,29 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-24">
                 <span class="text-[#bf953f] uppercase tracking-[0.4em] text-[10px] font-bold">Menu</span>
-                <h2 class="font-logo text-5xl mt-4 text-dark">Signature Services</h2>
+                <h2 class="font-logo text-5xl mt-4 text-dark">Services & Pricing</h2>
             </div>
             
-            <div id="services-container" class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
-                <p class="text-center col-span-3 text-grey">Loading services...</p>
+            <div id="services-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- JS will inject services here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO SECTION -->
+    <section id="portfolio" class="py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-[#bf953f] uppercase tracking-[0.4em] text-[10px] font-bold">Gallery</span>
+                <h2 class="font-logo text-5xl mt-4 text-dark">Real Results</h2>
+            </div>
+            
+            <div id="portfolio-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- JS will inject portfolio images here -->
+            </div>
+            
+            <div class="text-center mt-12">
+                 <a href="https://instagram.com/pmu.by.kate.nyc" target="_blank" class="text-[#bf953f] border-b border-[#bf953f] pb-1 uppercase text-[11px] tracking-widest hover:text-dark transition">View More Work on Instagram</a>
             </div>
         </div>
     </section>
@@ -245,7 +281,7 @@
         </div>
     </section>
 
-    <!-- REVIEWS / SOCIAL PROOF (NEW SECTION) -->
+    <!-- REVIEWS -->
     <section class="py-20 bg-white border-b border-gray-50">
         <div class="max-w-4xl mx-auto px-4 text-center">
             <div class="mb-10 text-[#bf953f] text-2xl">
@@ -267,13 +303,10 @@
                     <span class="font-bold text-xs uppercase tracking-wider text-dark">— Jessica M., Queens</span>
                 </div>
             </div>
-            <div class="mt-12">
-                <a href="https://instagram.com/pmu.by.kate.nyc" target="_blank" class="text-[#bf953f] text-xs uppercase tracking-[0.2em] hover:text-dark transition border-b border-[#bf953f] pb-1">See More Results on Instagram</a>
-            </div>
         </div>
     </section>
 
-    <!-- CONTACT / BOOKING FORM (UPDATED) -->
+    <!-- CONTACT / BOOKING FORM -->
     <section id="contact" class="py-28 bg-white relative overflow-hidden">
         <div class="absolute -right-40 top-20 w-[600px] h-[600px] bg-[#fcf6ba] rounded-full opacity-20 blur-3xl pointer-events-none"></div>
         <div class="max-w-6xl mx-auto px-4 relative z-10">
@@ -282,12 +315,11 @@
                 <div class="flex flex-col justify-center">
                     <span class="text-[#bf953f] uppercase tracking-[0.2em] text-[10px] font-bold mb-6">Appointments</span>
                     <h2 class="font-logo text-5xl mb-6 text-dark">Secure Your <br>Transformation</h2>
-                    <!-- Added Scarcity Trigger -->
                     <div class="inline-block bg-red-50 text-red-800 px-4 py-2 text-[10px] uppercase tracking-widest font-bold mb-8 border border-red-100">
                         <i class="fa-solid fa-clock mr-2"></i> Limited Availability for This Month
                     </div>
 
-                    <p class="text-grey mb-12 font-light leading-relaxed max-w-md">Appointments are limited. Please fill out the form to request a date. A $100 deposit is required upon confirmation.</p>
+                    <p class="text-grey mb-12 font-light leading-relaxed max-w-md">Appointments are limited. Please fill out the form to request a date. A $30 deposit is required upon confirmation.</p>
                     
                     <div class="space-y-8 mb-14">
                         <div class="flex items-center group cursor-pointer">
@@ -314,14 +346,17 @@
                         <div class="mb-12">
                             <label class="block text-[10px] uppercase tracking-widest text-gray-400 mb-2">Service</label>
                             <select name="service" class="form-input bg-transparent border-0 border-b cursor-pointer">
-                                <option>Powder Brows</option>
-                                <option>Lip Blush</option>
-                                <option>Eyeliner</option>
+                                <option>Ombré / Powder Brows ($390)</option>
+                                <option>Lip Blush ($440)</option>
+                                <option>Lip Neutralization ($440)</option>
+                                <option>Eyeliner ($290)</option>
+                                <option>Brows Touch Up ($190)</option>
+                                <option>Lip Blush Touch Up ($230)</option>
+                                <option>Eyeliner Touch Up ($150)</option>
                                 <option>Consultation</option>
                             </select>
                         </div>
                         <button type="submit" class="btn-gold w-full py-5 uppercase text-[11px] tracking-[0.2em] font-bold text-white shadow-xl">Send Request</button>
-                        <!-- Added Expectations Text -->
                         <p class="text-center text-xs text-gray-400 mt-6 leading-relaxed">
                             <i class="fa-solid fa-check mr-1 text-[#bf953f]"></i> We review requests daily. <br>You will receive a text or DM within 24 hours.
                         </p>
@@ -336,8 +371,14 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="flex justify-center mb-10">
                  <div class="text-center group cursor-pointer" onclick="window.scrollTo(0,0)">
-                    <span class="gold-text-style font-logo text-5xl font-normal block leading-none opacity-90 group-hover:opacity-100 transition">KP</span>
-                    <span class="text-gray-500 font-sans text-[0.6rem] tracking-[0.4em] uppercase block mt-4 group-hover:text-[#bf953f] transition">Kate Pedak NYC</span>
+                    <!-- 
+                        УВЕЛИЧЕН РАЗМЕР В ФУТЕРЕ:
+                        Было h-16 (64px). Стало h-24 (96px).
+                    -->
+                    <div class="h-24 w-full flex items-center justify-center mb-4">
+                        <img src="img/logo.png" alt="Kate Pedak PMU Logo" class="h-full w-auto object-contain opacity-80 group-hover:opacity-100 transition">
+                    </div>
+                    <span class="text-gray-500 font-sans text-[0.6rem] tracking-[0.4em] uppercase block group-hover:text-[#bf953f] transition">Kate Pedak NYC</span>
                 </div>
             </div>
             <div class="flex justify-center space-x-10 mb-12">
@@ -349,38 +390,76 @@
         </div>
     </footer>
 
-    <!-- MAIN SCRIPT (Здесь вся магия) -->
+    <!-- MAIN SCRIPT -->
     <script>
-        // --- 1. JSON DATA ---
+        // --- 1. UPDATED DATA ---
         const siteData = {
             services: [
                 {
                     id: "brows",
                     icon: "fa-eye",
-                    title: "Powder Brows",
-                    description: "A soft, pixelated shading technique that heals to a natural powder finish. Ideal for all skin types, creating a defined yet airy look.",
-                    time: "2.5 Hours",
-                    price: "$450+",
-                    popular: false
+                    title: "Ombré / Powder Brows",
+                    description: "A soft, pixelated shading technique that heals to a natural powder finish. Ideal for all skin types.",
+                    price: "$390",
+                    popular: true
                 },
                 {
                     id: "lips",
                     icon: "fa-heart",
                     title: "Lip Blush",
-                    description: "Restores lost pigment, corrects asymmetry, and adds a healthy flush of color. Heals to a translucent, watercolor effect.",
-                    time: "3 Hours",
-                    price: "$500+",
-                    popular: true
+                    description: "Restores lost pigment, corrects asymmetry, and adds a healthy flush of color. Watercolor effect.",
+                    price: "$440",
+                    popular: false
+                },
+                {
+                    id: "lip-neutral",
+                    icon: "fa-heart-pulse",
+                    title: "Lip Neutralization",
+                    description: "Specialized treatment for cool or dark lips to brighten and even out the tone.",
+                    price: "$440",
+                    popular: false
                 },
                 {
                     id: "eyes",
                     icon: "fa-wand-magic-sparkles",
-                    title: "Lash Line",
-                    description: "Pigment is placed between the lashes to create the illusion of thicker, darker lashes without looking like makeup.",
-                    time: "1.5 Hours",
-                    price: "$350+",
+                    title: "Eyeliner",
+                    description: "Pigment is placed between the lashes to create the illusion of thicker, darker lashes.",
+                    price: "$290",
+                    popular: false
+                },
+                {
+                    id: "brows-touch",
+                    icon: "fa-rotate",
+                    title: "Brows Touch Up",
+                    description: "Maintenance session to refresh color and shape (Monthly).",
+                    price: "$190",
+                    popular: false
+                },
+                {
+                    id: "lips-touch",
+                    icon: "fa-rotate",
+                    title: "Lip Blush Touch Up",
+                    description: "Maintenance session to refresh color and shape (Monthly).",
+                    price: "$230",
+                    popular: false
+                },
+                {
+                    id: "eyes-touch",
+                    icon: "fa-rotate",
+                    title: "Eyeliner Touch Up",
+                    description: "Maintenance session to refresh color and shape (Monthly).",
+                    price: "$150",
                     popular: false
                 }
+            ],
+            // Portfolio updated to PNG
+            portfolio: [
+                { img: "img/portfolio-1.png", alt: "Powder Brows Result", fallback: "https://images.unsplash.com/photo-1620802052148-348f99c85584?q=80&w=1965&auto=format&fit=crop" },
+                { img: "img/portfolio-2.png", alt: "Lip Blush Result", fallback: "https://images.unsplash.com/photo-1596704017254-9b1b1848fb62?q=80&w=2070&auto=format&fit=crop" },
+                { img: "img/portfolio-3.png", alt: "Eyeliner Result", fallback: "https://images.unsplash.com/photo-1588510883389-98c4b7b34e2c?q=80&w=2070&auto=format&fit=crop" },
+                { img: "img/portfolio-4.png", alt: "Healed Brows", fallback: "https://images.unsplash.com/photo-1620802052148-348f99c85584?q=80&w=1965&auto=format&fit=crop" },
+                { img: "img/portfolio-5.png", alt: "Lip Neutralization", fallback: "https://images.unsplash.com/photo-1596704017254-9b1b1848fb62?q=80&w=2070&auto=format&fit=crop" },
+                { img: "img/portfolio-6.png", alt: "Studio Process", fallback: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=2069&auto=format&fit=crop" }
             ],
             preCare: [
                 {
@@ -419,14 +498,31 @@
                 const borderClass = service.popular ? 'border-t-2 border-[#bf953f]' : '';
 
                 const html = `
-                <div class="bg-white p-12 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(191,149,63,0.15)] transition duration-500 hover:-translate-y-2 group relative ${borderClass}">
+                <div class="bg-white p-10 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(191,149,63,0.15)] transition duration-500 hover:-translate-y-2 group relative ${borderClass}">
                     ${isPopular}
-                    <div class="text-[#bf953f] text-4xl mb-8 opacity-80 group-hover:opacity-100 transition"><i class="fa-solid ${service.icon}"></i></div>
-                    <h3 class="font-logo text-2xl mb-6 text-dark tracking-wide">${service.title}</h3>
-                    <p class="text-grey font-light text-sm mb-10 leading-relaxed min-h-[80px]">${service.description}</p>
-                    <div class="flex justify-between items-center border-t border-gray-100 pt-8">
-                        <span class="text-[10px] uppercase tracking-widest font-bold text-gray-400">${service.time}</span>
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="text-[#bf953f] text-3xl opacity-80 group-hover:opacity-100 transition"><i class="fa-solid ${service.icon}"></i></div>
                         <span class="gold-text-style font-serif text-2xl italic">${service.price}</span>
+                    </div>
+                    <h3 class="font-logo text-xl mb-4 text-dark tracking-wide">${service.title}</h3>
+                    <p class="text-grey font-light text-sm leading-relaxed">${service.description}</p>
+                </div>
+                `;
+                container.innerHTML += html;
+            });
+        }
+
+        function renderPortfolio() {
+            const container = document.getElementById('portfolio-grid');
+            if (!container) return;
+            container.innerHTML = '';
+
+            siteData.portfolio.forEach(item => {
+                const html = `
+                <div class="portfolio-item aspect-square group relative cursor-pointer bg-gray-100">
+                    <img src="${item.img}" onerror="this.src='${item.fallback}'" alt="${item.alt}" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 portfolio-overlay opacity-0 group-hover:opacity-100 transition duration-500 flex items-end p-6">
+                        <span class="text-white font-logo tracking-widest text-sm translate-y-4 group-hover:translate-y-0 transition duration-500">${item.alt}</span>
                     </div>
                 </div>
                 `;
@@ -453,24 +549,22 @@
             });
         }
 
-        // --- 3. СКРИПТ ОТПРАВКИ ФОРМЫ (РЕШАЕТ ПРОБЛЕМУ С 404) ---
+        // --- 3. FORM HANDLER ---
         function handleFormSubmit() {
             const form = document.getElementById('booking-form');
             if(!form) return;
 
             form.addEventListener('submit', (e) => {
-                e.preventDefault(); // Останавливаем обычную отправку (чтобы не было 404)
+                e.preventDefault(); 
                 
                 const formData = new FormData(form);
                 
-                // Отправляем данные "тихо" через JS
                 fetch('/', {
                     method: 'POST',
                     headers: { "Content-Type": "application/x-www-form-urlencoded" },
                     body: new URLSearchParams(formData).toString()
                 })
                 .then(() => {
-                    // УСПЕХ: Перекидываем пользователя на страницу успеха
                     window.location.href = "/success.html";
                 })
                 .catch((error) => {
@@ -483,8 +577,9 @@
         // --- 4. INIT ---
         document.addEventListener('DOMContentLoaded', () => {
             renderServices();
+            renderPortfolio();
             renderPreCare();
-            handleFormSubmit(); // Включаем обработчик формы
+            handleFormSubmit();
             
             // Mobile Menu
             const btn = document.getElementById('mobile-menu-btn');
