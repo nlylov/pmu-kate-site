@@ -10,6 +10,49 @@
     <meta name="keywords" content="Permanent Makeup NYC, Powder Brows Manhattan, Lip Blush Queens, Microblading alternative NYC, Kate Pedak, PMU Rego Park">
     <meta name="author" content="Kate Pedak">
     <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://pedak.beauty/" />
+
+    <!-- Schema.org Structured Data (Business Card for Google) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BeautySalon",
+      "name": "Kate Pedak Permanent Makeup",
+      "image": "https://pedak.beauty/img/Profile.png",
+      "@id": "https://pedak.beauty",
+      "url": "https://pedak.beauty",
+      "telephone": "+19299280900",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Rego Park",
+        "addressRegion": "NY",
+        "postalCode": "11374",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 40.728,
+        "longitude": -73.863
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "10:00",
+        "closes": "20:00"
+      },
+      "sameAs": [
+        "https://instagram.com/pmu.by.kate.nyc"
+      ]
+    }
+    </script>
 
     <!-- Social Media Tags (Open Graph) -->
     <meta property="og:title" content="Kate Pedak | Hyper-Realistic Permanent Makeup NYC">
@@ -140,7 +183,7 @@
 
                 <!-- Mobile Menu Button -->
                 <div class="lg:hidden flex items-center absolute right-6 top-10">
-                    <button id="mobile-menu-btn" class="text-dark hover:text-[#bf953f] focus:outline-none">
+                    <button id="mobile-menu-btn" class="text-dark hover:text-[#bf953f] focus:outline-none" aria-label="Open Menu">
                         <i class="fa-solid fa-bars text-2xl"></i>
                     </button>
                 </div>
@@ -186,7 +229,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
                 <div class="relative group">
                     <div class="absolute -top-6 -left-6 w-full h-full border border-[#bf953f]/20 z-0 transition-all duration-700 group-hover:-top-3 group-hover:-left-3"></div>
-                    <img src="img/Profile.png" alt="Kate Pedak PMU" class="relative z-10 w-full h-[650px] object-cover grayscale group-hover:grayscale-0 transition duration-1000 ease-in-out shadow-2xl">
+                    <img src="img/Profile.png" alt="Kate Pedak PMU Artist NYC" class="relative z-10 w-full h-[650px] object-cover grayscale group-hover:grayscale-0 transition duration-1000 ease-in-out shadow-2xl">
                 </div>
                 <div class="pl-0 lg:pl-10">
                     <span class="gold-text-style font-serif text-2xl italic mb-4 block">The Artist</span>
@@ -204,7 +247,7 @@
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Services Section (NOW HARDCODED FOR SEO) -->
     <section id="services" class="py-28 bg-[#fafafa]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-24">
@@ -213,10 +256,80 @@
             </div>
             
             <div id="services-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- JS will inject services here -->
+                
+                <!-- Service 1 -->
+                <div class="bg-white p-10 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(191,149,63,0.15)] transition duration-500 hover:-translate-y-2 group relative border-t-2 border-[#bf953f]">
+                    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#bf953f] text-white px-3 py-1 text-[9px] uppercase tracking-widest">Most Popular</div>
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="text-[#bf953f] text-3xl opacity-80 group-hover:opacity-100 transition"><i class="fa-solid fa-eye"></i></div>
+                        <span class="gold-text-style font-serif text-2xl italic">$390</span>
+                    </div>
+                    <h3 class="font-logo text-xl mb-4 text-dark tracking-wide">Ombré / Powder Brows</h3>
+                    <p class="text-grey font-light text-sm leading-relaxed">A soft, pixelated shading technique that heals to a natural powder finish. Ideal for all skin types.</p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white p-10 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(191,149,63,0.15)] transition duration-500 hover:-translate-y-2 group relative">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="text-[#bf953f] text-3xl opacity-80 group-hover:opacity-100 transition"><i class="fa-solid fa-heart"></i></div>
+                        <span class="gold-text-style font-serif text-2xl italic">$440</span>
+                    </div>
+                    <h3 class="font-logo text-xl mb-4 text-dark tracking-wide">Lip Blush</h3>
+                    <p class="text-grey font-light text-sm leading-relaxed">Restores lost pigment, corrects asymmetry, and adds a healthy flush of color. Watercolor effect.</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white p-10 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(191,149,63,0.15)] transition duration-500 hover:-translate-y-2 group relative">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="text-[#bf953f] text-3xl opacity-80 group-hover:opacity-100 transition"><i class="fa-solid fa-heart-pulse"></i></div>
+                        <span class="gold-text-style font-serif text-2xl italic">$440</span>
+                    </div>
+                    <h3 class="font-logo text-xl mb-4 text-dark tracking-wide">Lip Neutralization</h3>
+                    <p class="text-grey font-light text-sm leading-relaxed">Specialized treatment for cool or dark lips to brighten and even out the tone.</p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-white p-10 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(191,149,63,0.15)] transition duration-500 hover:-translate-y-2 group relative">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="text-[#bf953f] text-3xl opacity-80 group-hover:opacity-100 transition"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                        <span class="gold-text-style font-serif text-2xl italic">$290</span>
+                    </div>
+                    <h3 class="font-logo text-xl mb-4 text-dark tracking-wide">Eyeliner</h3>
+                    <p class="text-grey font-light text-sm leading-relaxed">Pigment is placed between the lashes to create the illusion of thicker, darker lashes.</p>
+                </div>
+
+                <!-- Touch Up 1 -->
+                <div class="bg-white p-10 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(191,149,63,0.15)] transition duration-500 hover:-translate-y-2 group relative">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="text-[#bf953f] text-3xl opacity-80 group-hover:opacity-100 transition"><i class="fa-solid fa-rotate"></i></div>
+                        <span class="gold-text-style font-serif text-2xl italic">$190</span>
+                    </div>
+                    <h3 class="font-logo text-xl mb-4 text-dark tracking-wide">Brows Initial Touch-Up</h3>
+                    <p class="text-grey font-light text-sm leading-relaxed">Follow-up session to perfect color and shape after your initial procedure. Valid only within 30 days.</p>
+                </div>
+
+                 <!-- Touch Up 2 -->
+                 <div class="bg-white p-10 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(191,149,63,0.15)] transition duration-500 hover:-translate-y-2 group relative">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="text-[#bf953f] text-3xl opacity-80 group-hover:opacity-100 transition"><i class="fa-solid fa-rotate"></i></div>
+                        <span class="gold-text-style font-serif text-2xl italic">$230</span>
+                    </div>
+                    <h3 class="font-logo text-xl mb-4 text-dark tracking-wide">Lip Blush Initial Touch-Up</h3>
+                    <p class="text-grey font-light text-sm leading-relaxed">Designed to refine color and balance healing results. Available only within 30 days.</p>
+                </div>
+
+                <!-- Touch Up 3 (CORRECTLY ADDED) -->
+                <div class="bg-white p-10 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(191,149,63,0.15)] transition duration-500 hover:-translate-y-2 group relative">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="text-[#bf953f] text-3xl opacity-80 group-hover:opacity-100 transition"><i class="fa-solid fa-rotate"></i></div>
+                        <span class="gold-text-style font-serif text-2xl italic">$150</span>
+                    </div>
+                    <h3 class="font-logo text-xl mb-4 text-dark tracking-wide">Eyeliner Initial Touch-Up</h3>
+                    <p class="text-grey font-light text-sm leading-relaxed">Final adjustment session to ensure clean definition and symmetry. Must be completed within 30 days of the original procedure.</p>
+                </div>
+
             </div>
             
-            <!-- Clarification for Touch Ups -->
             <div class="text-center mt-12 max-w-2xl mx-auto">
                 <p class="text-xs text-gray-400 italic">
                     * Initial touch-up pricing applies only within 30 days of the original procedure. Appointments scheduled beyond this period are considered a new service or annual refresher.
@@ -225,7 +338,7 @@
         </div>
     </section>
 
-    <!-- PORTFOLIO SECTION -->
+    <!-- PORTFOLIO SECTION (NOW HARDCODED FOR SEO) -->
     <section id="portfolio" class="py-28 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -234,7 +347,55 @@
             </div>
             
             <div id="portfolio-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- JS will inject portfolio images here -->
+                
+                <!-- Item 1 -->
+                <div class="portfolio-item aspect-square group relative cursor-pointer bg-gray-100">
+                    <img src="img/portfolio-1.png" onerror="this.src='https://images.unsplash.com/photo-1620802052148-348f99c85584?q=80&w=1965&auto=format&fit=crop'" alt="Powder Brows healed result NYC" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 portfolio-overlay opacity-0 group-hover:opacity-100 transition duration-500 flex items-end p-6">
+                        <span class="text-white font-logo tracking-widest text-sm translate-y-4 group-hover:translate-y-0 transition duration-500">Powder Brows — healed result</span>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="portfolio-item aspect-square group relative cursor-pointer bg-gray-100">
+                    <img src="img/portfolio-2.png" onerror="this.src='https://images.unsplash.com/photo-1596704017254-9b1b1848fb62?q=80&w=2070&auto=format&fit=crop'" alt="Lip Blush healed soft watercolor tint" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 portfolio-overlay opacity-0 group-hover:opacity-100 transition duration-500 flex items-end p-6">
+                        <span class="text-white font-logo tracking-widest text-sm translate-y-4 group-hover:translate-y-0 transition duration-500">Lip Blush — soft watercolor tint</span>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="portfolio-item aspect-square group relative cursor-pointer bg-gray-100">
+                    <img src="img/portfolio-3.png" onerror="this.src='https://images.unsplash.com/photo-1588510883389-98c4b7b34e2c?q=80&w=2070&auto=format&fit=crop'" alt="Lash Line Enhancement natural definition" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 portfolio-overlay opacity-0 group-hover:opacity-100 transition duration-500 flex items-end p-6">
+                        <span class="text-white font-logo tracking-widest text-sm translate-y-4 group-hover:translate-y-0 transition duration-500">Lash Line Enhancement</span>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="portfolio-item aspect-square group relative cursor-pointer bg-gray-100">
+                    <img src="img/portfolio-4.png" onerror="this.src='https://images.unsplash.com/photo-1620802052148-348f99c85584?q=80&w=1965&auto=format&fit=crop'" alt="Healed Ombre Brows natural finish" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 portfolio-overlay opacity-0 group-hover:opacity-100 transition duration-500 flex items-end p-6">
+                        <span class="text-white font-logo tracking-widest text-sm translate-y-4 group-hover:translate-y-0 transition duration-500">Healed Brows — natural finish</span>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="portfolio-item aspect-square group relative cursor-pointer bg-gray-100">
+                    <img src="img/portfolio-5.png" onerror="this.src='https://images.unsplash.com/photo-1596704017254-9b1b1848fb62?q=80&w=2070&auto=format&fit=crop'" alt="Lip Neutralization tone correction NYC" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 portfolio-overlay opacity-0 group-hover:opacity-100 transition duration-500 flex items-end p-6">
+                        <span class="text-white font-logo tracking-widest text-sm translate-y-4 group-hover:translate-y-0 transition duration-500">Lip Neutralization</span>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="portfolio-item aspect-square group relative cursor-pointer bg-gray-100">
+                    <img src="img/portfolio-6.png" onerror="this.src='https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=2069&auto=format&fit=crop'" alt="Kate Pedak Studio Process" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 portfolio-overlay opacity-0 group-hover:opacity-100 transition duration-500 flex items-end p-6">
+                        <span class="text-white font-logo tracking-widest text-sm translate-y-4 group-hover:translate-y-0 transition duration-500">Studio Process</span>
+                    </div>
+                </div>
+
             </div>
             
             <div class="text-center mt-12">
@@ -243,7 +404,7 @@
         </div>
     </section>
 
-    <!-- Process Section -->
+    <!-- Process Section (NOW HARDCODED FOR SEO) -->
     <section id="process" class="py-28 bg-dark text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
@@ -272,7 +433,38 @@
                     <p class="text-[#bf953f] text-xs uppercase tracking-widest mb-8">Strict Pre-Care Instructions</p>
                     
                     <ul id="precare-list" class="space-y-6">
-                        <!-- Loading fallback -->
+                         <!-- ITEM 1 -->
+                         <li class="flex items-start">
+                            <i class="fa-solid fa-ban text-[#bf953f] mt-1 mr-4"></i>
+                            <div>
+                                <span class="block text-sm font-bold uppercase tracking-wide">24h Before: No Coffee</span>
+                                <span class="text-xs text-gray-500">Caffeine causes bleeding and poor color retention. This is critical!</span>
+                            </div>
+                        </li>
+                        <!-- ITEM 2 -->
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-wine-glass-empty text-[#bf953f] mt-1 mr-4"></i>
+                            <div>
+                                <span class="block text-sm font-bold uppercase tracking-wide">24h Before: No Alcohol</span>
+                                <span class="text-xs text-gray-500">Alcohol thins the blood. Please avoid it completely.</span>
+                            </div>
+                        </li>
+                        <!-- ITEM 3 -->
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-syringe text-[#bf953f] mt-1 mr-4"></i>
+                            <div>
+                                <span class="block text-sm font-bold uppercase tracking-wide">4 Weeks: No Botox</span>
+                                <span class="text-xs text-gray-500">Botox must be done at least 4 weeks prior to your appointment.</span>
+                            </div>
+                        </li>
+                        <!-- ITEM 4 -->
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-sun text-[#bf953f] mt-1 mr-4"></i>
+                            <div>
+                                <span class="block text-sm font-bold uppercase tracking-wide">1 Week: No Sun</span>
+                                <span class="text-xs text-gray-500">We cannot work on sunburned or freshly tanned skin.</span>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -384,7 +576,7 @@
                         <i class="fa-solid fa-clock mr-2"></i> Limited Availability for This Month
                     </div>
 
-                    <!-- TRUST SIGNALS (NEW!) -->
+                    <!-- TRUST SIGNALS -->
                     <div class="mb-8 space-y-2">
                         <div class="flex items-center text-sm text-gray-600 font-light">
                             <i class="fa-solid fa-certificate text-[#bf953f] w-6"></i>
@@ -462,173 +654,15 @@
             <div class="flex justify-center space-x-10 mb-12">
                 <a href="https://instagram.com/pmu.by.kate.nyc" class="text-gray-500 hover:text-[#bf953f] transition transform hover:-translate-y-1"><i class="fa-brands fa-instagram text-2xl"></i></a>
                 <a href="tel:+19299280900" class="text-gray-500 hover:text-[#bf953f] transition transform hover:-translate-y-1"><i class="fa-solid fa-phone text-2xl"></i></a>
-                <a href="mailto:katerinapedak@gmail.com" class="text-gray-500 hover:text-[#bf953f] transition transform hover:-translate-y-1"><i class="fa-regular fa-envelope text-2xl"></i></a>
+                <a href="mailto:katebynyc@gmail.com" class="text-gray-500 hover:text-[#bf953f] transition transform hover:-translate-y-1"><i class="fa-regular fa-envelope text-2xl"></i></a>
             </div>
             <div class="text-[10px] text-gray-700 uppercase tracking-widest font-medium">&copy; 2024 Kate Pedak Permanent Makeup. All rights reserved.</div>
         </div>
     </footer>
 
-    <!-- MAIN SCRIPT -->
+    <!-- MAIN SCRIPT (CLEANED UP) -->
     <script>
-        // --- 1. UPDATED DATA ---
-        const siteData = {
-            services: [
-                {
-                    id: "brows",
-                    icon: "fa-eye",
-                    title: "Ombré / Powder Brows",
-                    description: "A soft, pixelated shading technique that heals to a natural powder finish. Ideal for all skin types.",
-                    price: "$390",
-                    popular: true
-                },
-                {
-                    id: "lips",
-                    icon: "fa-heart",
-                    title: "Lip Blush",
-                    description: "Restores lost pigment, corrects asymmetry, and adds a healthy flush of color. Watercolor effect.",
-                    price: "$440",
-                    popular: false
-                },
-                {
-                    id: "lip-neutral",
-                    icon: "fa-heart-pulse",
-                    title: "Lip Neutralization",
-                    description: "Specialized treatment for cool or dark lips to brighten and even out the tone.",
-                    price: "$440",
-                    popular: false
-                },
-                {
-                    id: "eyes",
-                    icon: "fa-wand-magic-sparkles",
-                    title: "Eyeliner",
-                    description: "Pigment is placed between the lashes to create the illusion of thicker, darker lashes.",
-                    price: "$290",
-                    popular: false
-                },
-                // --- UPDATED TOUCH UP DESCRIPTIONS (Initial within 30 days) ---
-                {
-                    id: "brows-touch",
-                    icon: "fa-rotate",
-                    title: "Brows Initial Touch-Up",
-                    description: "Follow-up session to perfect color and shape after your initial procedure. Valid only within 30 days of the original appointment.",
-                    price: "$190",
-                    popular: false
-                },
-                {
-                    id: "lips-touch",
-                    icon: "fa-rotate",
-                    title: "Lip Blush Initial Touch-Up",
-                    description: "Designed to refine color and balance healing results. Available only within 30 days after the initial Lip Blush procedure.",
-                    price: "$230",
-                    popular: false
-                },
-                {
-                    id: "eyes-touch",
-                    icon: "fa-rotate",
-                    title: "Eyeliner Initial Touch-Up",
-                    description: "Final adjustment session to ensure clean definition and symmetry. Must be completed within 30 days of the original procedure.",
-                    price: "$150",
-                    popular: false
-                }
-            ],
-            // Portfolio Updated Captions for SEO
-            portfolio: [
-                { img: "img/portfolio-1.png", alt: "Powder Brows — healed result", fallback: "https://images.unsplash.com/photo-1620802052148-348f99c85584?q=80&w=1965&auto=format&fit=crop" },
-                { img: "img/portfolio-2.png", alt: "Lip Blush — healed, soft watercolor tint", fallback: "https://images.unsplash.com/photo-1596704017254-9b1b1848fb62?q=80&w=2070&auto=format&fit=crop" },
-                { img: "img/portfolio-3.png", alt: "Lash Line Enhancement — natural definition", fallback: "https://images.unsplash.com/photo-1588510883389-98c4b7b34e2c?q=80&w=2070&auto=format&fit=crop" },
-                { img: "img/portfolio-4.png", alt: "Healed Brows — natural finish", fallback: "https://images.unsplash.com/photo-1620802052148-348f99c85584?q=80&w=1965&auto=format&fit=crop" },
-                { img: "img/portfolio-5.png", alt: "Lip Neutralization — tone correction", fallback: "https://images.unsplash.com/photo-1596704017254-9b1b1848fb62?q=80&w=2070&auto=format&fit=crop" },
-                { img: "img/portfolio-6.png", alt: "Studio Process", fallback: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=2069&auto=format&fit=crop" }
-            ],
-            preCare: [
-                {
-                    icon: "fa-ban",
-                    title: "24h Before: No Coffee",
-                    desc: "Caffeine causes bleeding and poor color retention. This is critical!"
-                },
-                {
-                    icon: "fa-wine-glass-empty",
-                    title: "24h Before: No Alcohol",
-                    desc: "Alcohol thins the blood. Please avoid it completely."
-                },
-                {
-                    icon: "fa-syringe",
-                    title: "4 Weeks: No Botox",
-                    desc: "Botox must be done at least 4 weeks prior to your appointment."
-                },
-                {
-                    icon: "fa-sun",
-                    title: "1 Week: No Sun",
-                    desc: "We cannot work on sunburned or freshly tanned skin."
-                }
-            ]
-        };
-
-        // --- 2. RENDER FUNCTIONS ---
-        function renderServices() {
-            const container = document.getElementById('services-container');
-            if (!container) return;
-            container.innerHTML = ''; 
-
-            siteData.services.forEach(service => {
-                const isPopular = service.popular 
-                    ? `<div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#bf953f] text-white px-3 py-1 text-[9px] uppercase tracking-widest">Most Popular</div>` 
-                    : '';
-                const borderClass = service.popular ? 'border-t-2 border-[#bf953f]' : '';
-
-                const html = `
-                <div class="bg-white p-10 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-10px_rgba(191,149,63,0.15)] transition duration-500 hover:-translate-y-2 group relative ${borderClass}">
-                    ${isPopular}
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="text-[#bf953f] text-3xl opacity-80 group-hover:opacity-100 transition"><i class="fa-solid ${service.icon}"></i></div>
-                        <span class="gold-text-style font-serif text-2xl italic">${service.price}</span>
-                    </div>
-                    <h3 class="font-logo text-xl mb-4 text-dark tracking-wide">${service.title}</h3>
-                    <p class="text-grey font-light text-sm leading-relaxed">${service.description}</p>
-                </div>
-                `;
-                container.innerHTML += html;
-            });
-        }
-
-        function renderPortfolio() {
-            const container = document.getElementById('portfolio-grid');
-            if (!container) return;
-            container.innerHTML = '';
-
-            siteData.portfolio.forEach(item => {
-                const html = `
-                <div class="portfolio-item aspect-square group relative cursor-pointer bg-gray-100">
-                    <img src="${item.img}" onerror="this.src='${item.fallback}'" alt="${item.alt}" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 portfolio-overlay opacity-0 group-hover:opacity-100 transition duration-500 flex items-end p-6">
-                        <span class="text-white font-logo tracking-widest text-sm translate-y-4 group-hover:translate-y-0 transition duration-500">${item.alt}</span>
-                    </div>
-                </div>
-                `;
-                container.innerHTML += html;
-            });
-        }
-
-        function renderPreCare() {
-            const list = document.getElementById('precare-list');
-            if (!list) return;
-            list.innerHTML = '';
-
-            siteData.preCare.forEach(item => {
-                const html = `
-                <li class="flex items-start">
-                    <i class="fa-solid ${item.icon} text-[#bf953f] mt-1 mr-4"></i>
-                    <div>
-                        <span class="block text-sm font-bold uppercase tracking-wide">${item.title}</span>
-                        <span class="text-xs text-gray-500">${item.desc}</span>
-                    </div>
-                </li>
-                `;
-                list.innerHTML += html;
-            });
-        }
-
-        // --- 3. FORM HANDLER ---
+        // Form Handling Logic (Netlify)
         function handleFormSubmit() {
             const form = document.getElementById('booking-form');
             if(!form) return;
@@ -653,14 +687,10 @@
             });
         }
 
-        // --- 4. INIT ---
+        // Mobile Menu Logic
         document.addEventListener('DOMContentLoaded', () => {
-            renderServices();
-            renderPortfolio();
-            renderPreCare();
             handleFormSubmit();
             
-            // Mobile Menu
             const btn = document.getElementById('mobile-menu-btn');
             const menu = document.getElementById('mobile-menu');
             if(btn && menu) {
