@@ -751,7 +751,8 @@
                         <div class="flex items-center group cursor-pointer">
                             <div
                                 class="w-14 h-14 rounded-full border border-gray-100 flex items-center justify-center text-[#bf953f] mr-8 group-hover:border-[#bf953f] transition">
-                                <i class="fa-solid fa-phone text-xl"></i></div>
+                                <i class="fa-solid fa-phone text-xl"></i>
+                            </div>
                             <div>
                                 <p class="text-[10px] uppercase tracking-widest text-gray-400 mb-1">Phone</p>
                                 <p class="text-dark font-medium text-lg">+1 (929) 928-0900</p>
@@ -761,7 +762,8 @@
                             class="flex items-center group cursor-pointer">
                             <div
                                 class="w-14 h-14 rounded-full border border-gray-100 flex items-center justify-center text-[#bf953f] mr-8 group-hover:border-[#bf953f] transition">
-                                <i class="fa-brands fa-instagram text-xl"></i></div>
+                                <i class="fa-brands fa-instagram text-xl"></i>
+                            </div>
                             <div>
                                 <p class="text-[10px] uppercase tracking-widest text-gray-400 mb-1">Portfolio</p>
                                 <p class="text-dark font-medium text-lg">@pmu.by.kate.nyc</p>
@@ -796,6 +798,16 @@
                                 <option>Eyeliner Monthly Touch Up ($150)</option>
                                 <option>Consultation</option>
                             </select>
+                        </div>
+                        <div class="mb-8 flex items-start gap-3">
+                            <input type="checkbox" id="privacy-consent" name="privacy_consent" required
+                                class="mt-1 w-4 h-4 text-[#bf953f] border-gray-300 rounded focus:ring-[#bf953f]">
+                            <label for="privacy-consent"
+                                class="text-[10px] uppercase tracking-wide text-gray-400 leading-tight">
+                                I agree to the <a href="/privacy.html" class="underline hover:text-[#bf953f]">Privacy
+                                    Policy</a> and <a href="/terms.html" class="underline hover:text-[#bf953f]">Terms of
+                                    Service</a>.
+                            </label>
                         </div>
                         <button type="submit"
                             class="btn-gold w-full py-5 uppercase text-[11px] tracking-[0.2em] font-bold text-white shadow-xl">Send
@@ -835,8 +847,14 @@
                     class="text-gray-500 hover:text-[#bf953f] transition transform hover:-translate-y-1"><i
                         class="fa-regular fa-envelope text-2xl"></i></a>
             </div>
-            <div class="text-[10px] text-gray-700 uppercase tracking-widest font-medium">&copy; 2024 Kate Pedak
-                Permanent Makeup. All rights reserved.</div>
+            <div
+                class="flex flex-col md:flex-row justify-center items-center gap-4 text-[10px] text-gray-700 uppercase tracking-widest font-medium">
+                <span>&copy; 2024 Kate Pedak Permanent Makeup. All rights reserved.</span>
+                <span class="hidden md:inline">|</span>
+                <a href="/privacy.html" class="hover:text-[#bf953f] transition">Privacy Policy</a>
+                <span class="hidden md:inline">|</span>
+                <a href="/terms.html" class="hover:text-[#bf953f] transition">Terms of Service</a>
+            </div>
         </div>
     </footer>
 
